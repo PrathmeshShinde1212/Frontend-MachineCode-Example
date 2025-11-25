@@ -1,16 +1,27 @@
-# React + Vite
+                                                  ***  Question ***
+                                                  
+Build a React Accordion component that allows users to expand and collapse sections of content. When a section is clicked, it should toggle its visibility. If a new section is clicked, it should expand while the others collapse (i.e., only one section is open at a time).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Requirements:-
 
-Currently, two official plugins are available:
+ 1. Display a list of accordion items, each with a title and content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2. Clicking on a title expands its content and collapses any previously opened item.
 
-## React Compiler
+ 3. If an already open item is clicked, it should collapse.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ 4. The component should accept an array of items as props. Each item contains:
 
-## Expanding the ESLint configuration
+title: The heading of the accordion item.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ content: The details inside the accordion item.
+
+ 5. The component should handle edge cases such as an empty list or invalid input by displaying a message "No items available".
+
+ Constraints & Edge Cases:-
+
+ The items prop should be an array of objects { title: string, content: string).
+
+If items is empty, display a message like "No items available."
+
+Optimize performance by using React's useState and conditional rendering.
