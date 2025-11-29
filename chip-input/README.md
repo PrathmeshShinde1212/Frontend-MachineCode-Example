@@ -1,16 +1,23 @@
-# React + Vite
+                        ***  QUESTION  ***
+In this task, you are asked to create a Chips Input component that allows users to input a series of tags or keywords. The component will display these tags as "chips" (small labels), which users can add and remove dynamically.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
 
-Currently, two official plugins are available:
+1. Input Field: Users can type text into an input field.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Add Chips: When the user presses the "Enter" key, the typed text will be added as a new chip (tag). Empty or whitespace-only chips should not be added
 
-## React Compiler
+3. Remove Chips: Users can delete a chip by clicking the "X" button next to it.
+4. Horizontal Display: The chips should be displayed in a horizontal list.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+5. Persistence: The list of chips should be maintained even when the component re-renders.
 
-## Expanding the ESLint configuration
+Important Points:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. The input field should be of type text.
+
+2. Button should be labeled "X" to delete chips
+
+3. If two chips have the same name, deleting one should NOT delete both.
+
+4. Make sure to use onKeyDown event handler instead of onKeyPress because onKeyPress is deprecated.
